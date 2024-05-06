@@ -1,25 +1,60 @@
+package api.tests;
 
 import io.restassured.http.ContentType;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.equalTo;
 
-public class UniversityApiTests {
+public class UniversityApiTests extends BaseTest {
     @Test
     void getUniversityHappyPath() {
-
         given()
-                .baseUri("http://127.0.0.1:4010") // Base URI for the mock server
-                .header("api_key", "f3c84cbb-1f9a-4b87-bb5b-2d1691b24e1e") // Passing API key as a header
-                .queryParam("universityName", "University of Toronto") // Query parameter for the request
-        .when()
+                .header(API_KEY_HEADER, API_KEY_VALUE)
+                .queryParam("universityName", "University of Toronto")
+                .contentType(ContentType.JSON) // Specify content type here
+                .when()
                 .get("/university")
-        .then()
-                .statusCode(200) // Verify the response status code
-                .contentType(ContentType.JSON) // Verify the response content type
-                .body("UniversityName", equalTo("University of Toronto")); // Validate specific response fields
+                .then()
+                .statusCode(200)
+                .body("UniversityName", equalTo("University of Toronto"));
     }
+   @Test
+    void testMissingParameterInvalidRequest() {
+        // Send a GET request to the endpoint without providing the required parameter (e.g., "universityName")
+        given()
+                .header(API_KEY_HEADER, API_KEY_VALUE)
+                // Not including the required query parameter, e.g., "universityName"
+                .when()
+                .get("/university")
+                .then()
+                .statusCode(400) // Expecting HTTP status code 422
+                .contentType(ContentType.JSON) // Expecting JSON response
+                // Optionally, check the response body for an appropriate error message
+                .body("error.message", equalTo("Missing required parameter: universityName"));
     }
+
+    @Test
+    void testMissingAuthHeaderFor404Error() {
+        given()
+                .when()
+                .get("/university") // Endpoint where authentication is required
+                .then()
+                .statusCode(404); // Expect 404 Not Found status code for missing authentication
+    }
+
+
+    @Test
+    void testInvalidAuthHeader() {
+        given()
+                .header(API_KEY_HEADER, "Invalid-Token") // Provide an invalid token
+                .when()
+                .get("/university")
+                .then()
+                .statusCode(401); // Expect 401 Unauthorized status code
+    }
+
+}
 
 
