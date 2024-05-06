@@ -5,15 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b4eca860-f1b7-4e8d-9a5d-0a8dc367f82a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/api/tests/BaseTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/api/tests/UniversityApiTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api/tests/UniversityApiTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/tests/UniversityApiTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,21 +35,22 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="openDirectoriesWithSingleClick" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.All in University.executor": "Run",
     "JUnit.UniversityApiTests.getUniversityHappyPath.executor": "Run",
     "JUnit.UniversityApiTests.testInvalidAuthHeader.executor": "Run",
     "JUnit.UniversityApiTests.testInvalidRequest.executor": "Run",
     "JUnit.UniversityApiTests.testMissingAuthHeader.executor": "Run",
+    "JUnit.UniversityApiTests.testMissingAuthHeaderFor401Error.executor": "Run",
     "JUnit.UniversityApiTests.testMissingAuthHeaderFor404Error.executor": "Run",
     "JUnit.UniversityApiTests.testMissingParameterInvalidRequest.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Vishnu/IdeaProjects/University/src/test",
     "onboarding.tips.debug.path": "C:/Users/Vishnu/IdeaProjects/University/src/main/java/org/example/Main.java",
@@ -69,7 +64,15 @@
       <recent name="C:\Users\Vishnu\IdeaProjects\University\src\test" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UniversityApiTests.testMissingAuthHeaderFor404Error">
+  <component name="RunManager" selected="JUnit.All in University">
+    <configuration name="All in University" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="University" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UniversityApiTests.getUniversityHappyPath" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="University" />
       <extension name="coverage">
@@ -86,7 +89,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UniversityApiTests.testInvalidAuthHeader" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UniversityApiTests.testMissingAuthHeaderFor401Error" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="University" />
       <extension name="coverage">
         <pattern>
@@ -96,23 +99,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="api.tests" />
       <option name="MAIN_CLASS_NAME" value="api.tests.UniversityApiTests" />
-      <option name="METHOD_NAME" value="testInvalidAuthHeader" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UniversityApiTests.testMissingAuthHeader" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="University" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="api.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="api.tests" />
-      <option name="MAIN_CLASS_NAME" value="api.tests.UniversityApiTests" />
-      <option name="METHOD_NAME" value="testMissingAuthHeader" />
+      <option name="METHOD_NAME" value="testMissingAuthHeaderFor401Error" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -152,9 +139,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in University" />
         <item itemvalue="JUnit.UniversityApiTests.testMissingAuthHeaderFor404Error" />
-        <item itemvalue="JUnit.UniversityApiTests.testInvalidAuthHeader" />
-        <item itemvalue="JUnit.UniversityApiTests.testMissingAuthHeader" />
+        <item itemvalue="JUnit.UniversityApiTests.testMissingAuthHeaderFor401Error" />
         <item itemvalue="JUnit.UniversityApiTests.testMissingParameterInvalidRequest" />
         <item itemvalue="JUnit.UniversityApiTests.getUniversityHappyPath" />
       </list>
@@ -177,5 +164,20 @@
       <updated>1713368437175</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/api/tests/UniversityApiTests.java</url>
+          <line>11</line>
+          <properties class="api.tests.UniversityApiTests" method="getUniversityHappyPath">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

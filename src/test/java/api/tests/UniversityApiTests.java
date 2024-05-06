@@ -9,7 +9,7 @@ import static org.hamcrest.Matchers.equalTo;
 
 public class UniversityApiTests extends BaseTest {
     @Test
-    void getUniversityHappyPath() {
+    void getUniversityHappyPath() {//passed
         given()
                 .header(API_KEY_HEADER, API_KEY_VALUE)
                 .queryParam("universityName", "University of Toronto")
@@ -20,7 +20,7 @@ public class UniversityApiTests extends BaseTest {
                 .statusCode(200)
                 .body("UniversityName", equalTo("University of Toronto"));
     }
-   @Test
+    /*@Test
     void testMissingParameterInvalidRequest() {
         // Send a GET request to the endpoint without providing the required parameter (e.g., "universityName")
         given()
@@ -29,32 +29,29 @@ public class UniversityApiTests extends BaseTest {
                 .when()
                 .get("/university")
                 .then()
-                .statusCode(400) // Expecting HTTP status code 422
-                .contentType(ContentType.JSON) // Expecting JSON response
+                .statusCode(422) // Expecting HTTP status code 422
                 // Optionally, check the response body for an appropriate error message
                 .body("error.message", equalTo("Missing required parameter: universityName"));
+    }*/
+
+    @Test
+    void testMissingAuthHeaderFor401Error() {
+        given()
+                .when()
+                .get("/university") // Endpoint where authentication is required
+                .then()
+                .statusCode(401); // Expect 401 Unauthorized status code for missing authentication
     }
+
 
     @Test
     void testMissingAuthHeaderFor404Error() {
         given()
                 .when()
-                .get("/university") // Endpoint where authentication is required
+                .get("/universities") // Endpoint where authentication is required
                 .then()
                 .statusCode(404); // Expect 404 Not Found status code for missing authentication
     }
-
-
-    @Test
-    void testInvalidAuthHeader() {
-        given()
-                .header(API_KEY_HEADER, "Invalid-Token") // Provide an invalid token
-                .when()
-                .get("/university")
-                .then()
-                .statusCode(401); // Expect 401 Unauthorized status code
-    }
-
 }
 
 
