@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b4eca860-f1b7-4e8d-9a5d-0a8dc367f82a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/api/tests/UniversityApiTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/tests/UniversityApiTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api/tests/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api/tests/UniversityApiTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/UniversityApiTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +27,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
     <option name="showPreview" value="true" />
   </component>
   <component name="ProjectColorInfo">{
@@ -40,16 +42,23 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "JUnit.All in University.executor": "Run",
+    "JUnit.UniversityApiTests.getUniversityHappyPath (1).executor": "Run",
     "JUnit.UniversityApiTests.getUniversityHappyPath.executor": "Run",
     "JUnit.UniversityApiTests.testInvalidAuthHeader.executor": "Run",
     "JUnit.UniversityApiTests.testInvalidRequest.executor": "Run",
+    "JUnit.UniversityApiTests.testInvalidURLPath.executor": "Run",
     "JUnit.UniversityApiTests.testMissingAuthHeader.executor": "Run",
     "JUnit.UniversityApiTests.testMissingAuthHeaderFor401Error.executor": "Run",
+    "JUnit.UniversityApiTests.testMissingAuthHeaderFor404Error (1).executor": "Run",
     "JUnit.UniversityApiTests.testMissingAuthHeaderFor404Error.executor": "Run",
+    "JUnit.UniversityApiTests.testMissingParameterInvalidRequest (1).executor": "Run",
     "JUnit.UniversityApiTests.testMissingParameterInvalidRequest.executor": "Run",
+    "JUnit.UniversityApiTests.testUnauthorizedEndpoint.executor": "Run",
+    "JUnit.UniversityApiTests.testUnencodedParameter.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "TestNG.C:/Users/Vishnu/IdeaProjects/University/testng.xml.executor": "Run",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Vishnu/IdeaProjects/University/src/test",
@@ -64,86 +73,88 @@
       <recent name="C:\Users\Vishnu\IdeaProjects\University\src\test" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in University">
-    <configuration name="All in University" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="University" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UniversityApiTests.getUniversityHappyPath" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.C:/Users/Vishnu/IdeaProjects/University/testng.xml">
+    <configuration name="UniversityApiTests.testInvalidURLPath" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="University" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="api.tests.*" />
+          <option name="PATTERN" value="tests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="api.tests" />
-      <option name="MAIN_CLASS_NAME" value="api.tests.UniversityApiTests" />
-      <option name="METHOD_NAME" value="getUniversityHappyPath" />
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.UniversityApiTests" />
+      <option name="METHOD_NAME" value="testInvalidURLPath" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UniversityApiTests.testMissingAuthHeaderFor401Error" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UniversityApiTests.testMissingAuthHeaderFor404Error (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="University" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="api.tests.*" />
+          <option name="PATTERN" value="tests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="api.tests" />
-      <option name="MAIN_CLASS_NAME" value="api.tests.UniversityApiTests" />
-      <option name="METHOD_NAME" value="testMissingAuthHeaderFor401Error" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UniversityApiTests.testMissingAuthHeaderFor404Error" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="University" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="api.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="api.tests" />
-      <option name="MAIN_CLASS_NAME" value="api.tests.UniversityApiTests" />
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.UniversityApiTests" />
       <option name="METHOD_NAME" value="testMissingAuthHeaderFor404Error" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UniversityApiTests.testMissingParameterInvalidRequest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UniversityApiTests.testUnauthorizedEndpoint" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="University" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="api.tests.*" />
+          <option name="PATTERN" value="tests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="api.tests" />
-      <option name="MAIN_CLASS_NAME" value="api.tests.UniversityApiTests" />
-      <option name="METHOD_NAME" value="testMissingParameterInvalidRequest" />
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.UniversityApiTests" />
+      <option name="METHOD_NAME" value="testUnauthorizedEndpoint" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UniversityApiTests.testUnencodedParameter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="University" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.UniversityApiTests" />
+      <option name="METHOD_NAME" value="testUnencodedParameter" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="C:/Users/Vishnu/IdeaProjects/University/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="University" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.All in University" />
-        <item itemvalue="JUnit.UniversityApiTests.testMissingAuthHeaderFor404Error" />
-        <item itemvalue="JUnit.UniversityApiTests.testMissingAuthHeaderFor401Error" />
-        <item itemvalue="JUnit.UniversityApiTests.testMissingParameterInvalidRequest" />
-        <item itemvalue="JUnit.UniversityApiTests.getUniversityHappyPath" />
+        <item itemvalue="TestNG.C:/Users/Vishnu/IdeaProjects/University/testng.xml" />
+        <item itemvalue="JUnit.UniversityApiTests.testUnencodedParameter" />
+        <item itemvalue="JUnit.UniversityApiTests.testInvalidURLPath" />
+        <item itemvalue="JUnit.UniversityApiTests.testMissingAuthHeaderFor404Error (1)" />
+        <item itemvalue="JUnit.UniversityApiTests.testUnauthorizedEndpoint" />
       </list>
     </recent_temporary>
   </component>
@@ -164,20 +175,5 @@
       <updated>1713368437175</updated>
     </task>
     <servers />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/test/java/api/tests/UniversityApiTests.java</url>
-          <line>11</line>
-          <properties class="api.tests.UniversityApiTests" method="getUniversityHappyPath">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

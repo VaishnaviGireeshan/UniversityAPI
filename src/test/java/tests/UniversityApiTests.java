@@ -1,10 +1,10 @@
-package api.tests;
+package tests;
 
 import io.restassured.http.ContentType;
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.Test;
+
 
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.equalTo;
 
 public class UniversityApiTests extends BaseTest {
@@ -20,22 +20,21 @@ public class UniversityApiTests extends BaseTest {
                 .statusCode(200)
                 .body("UniversityName", equalTo("University of Toronto"));
     }
-    /*@Test
+
+   /* @Test
     void testMissingParameterInvalidRequest() {
         // Send a GET request to the endpoint without providing the required parameter (e.g., "universityName")
         given()
                 .header(API_KEY_HEADER, API_KEY_VALUE)
-                // Not including the required query parameter, e.g., "universityName"
+                .contentType(ContentType.JSON)
                 .when()
-                .get("/university")
+                .post("/university")
                 .then()
-                .statusCode(422) // Expecting HTTP status code 422
-                // Optionally, check the response body for an appropriate error message
-                .body("error.message", equalTo("Missing required parameter: universityName"));
+                .statusCode(422);
     }*/
 
     @Test
-    void testMissingAuthHeaderFor401Error() {
+    void testUnauthorizedEndpoint() {
         given()
                 .when()
                 .get("/university") // Endpoint where authentication is required
@@ -45,12 +44,31 @@ public class UniversityApiTests extends BaseTest {
 
 
     @Test
-    void testMissingAuthHeaderFor404Error() {
+    void testMissingAuthHeader() {
         given()
+                .header(API_KEY_HEADER, API_KEY_VALUE)
                 .when()
-                .get("/universities") // Endpoint where authentication is required
+                .get("/universitiessss") // Endpoint where authentication is required
                 .then()
                 .statusCode(404); // Expect 404 Not Found status code for missing authentication
+    }
+    @Test
+    void testInvalidURLPath() {
+        given()
+                .when()
+                .get("/invalidPath") // Endpoint with an invalid URL path
+                .then()
+                .statusCode(404); // Expect 404 Not Found status code for invalid URL path
+    }
+    @Test
+    void testUnencodedParameter() {
+        given()
+                .header(API_KEY_HEADER, API_KEY_VALUE)
+                .queryParam("param", "special&chars")
+                .when()
+                .get("/universities")
+                .then()
+                .statusCode(200);
     }
 }
 
